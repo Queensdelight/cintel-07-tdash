@@ -5,11 +5,13 @@ from shiny import reactive
 from shiny.express import input, render, ui
 import palmerpenguins 
 
+# Load the data
 df = palmerpenguins.load_penguins()
 
+# Page title
 ui.page_opts(title="Bukola's Penguins dashboard", fillable=True)
 
-
+# Slider filter for selecting the category
 with ui.sidebar(title="Filter controls"):
     ui.input_slider("mass", "Mass", 2000, 6000, 6000)
     ui.input_checkbox_group(
@@ -101,7 +103,7 @@ with ui.layout_columns():
 
 #ui.include_css(app_dir / "styles.css")
 
-
+# Reactive plot
 @reactive.calc
 def filtered_df():
     filt_df = df[df["species"].isin(input.species())]
