@@ -7,7 +7,7 @@ import palmerpenguins
 
 df = palmerpenguins.load_penguins()
 
-ui.page_opts(title="Penguins dashboard", fillable=True)
+ui.page_opts(title="Bukola's Penguins dashboard", fillable=True)
 
 
 with ui.sidebar(title="Filter controls"):
@@ -22,7 +22,7 @@ with ui.sidebar(title="Filter controls"):
     ui.h6("Links")
     ui.a(
         "GitHub Source",
-        href="https://github.com/denisecase/cintel-07-tdash",
+        https://github.com/Queensdelight/cintel-07-tdash.git,
         target="_blank",
     )
     ui.a(
